@@ -87,7 +87,7 @@ function App() {
       <footer className="footer">
         <div className="wrap footer-inner">
           <div>© {new Date().getFullYear()} Ali Emami · Emory University</div>
-          <div>Handset in Fraunces & Inter · Last touched {new Date().toLocaleDateString()}</div>
+          <div>Last touched {new Date().toLocaleDateString()}</div>
         </div>
       </footer>
 

@@ -16,6 +16,7 @@ const authorList = (authors) =>
 
 // -------- Nav --------
 function Nav({ route, go }) {
+  const [open, setOpen] = useState(false);
   const items = [
     ["home", "Home"],
     ["research", "Research"],
@@ -24,10 +25,11 @@ function Nav({ route, go }) {
     ["news", "News"],
     ["contact", "Contact"],
   ];
+  const handle = (k) => (e) => { e.preventDefault(); go(k); setOpen(false); };
   return (
     <div className="nav">
       <div className="wrap nav-inner">
-        <a className="brand" href="#home" onClick={(e) => { e.preventDefault(); go("home"); }}>
+        <a className="brand" href="#home" onClick={handle("home")}>
           <span className="brand-dot" />
           <span>Ali Emami</span>
         </a>
@@ -37,13 +39,35 @@ function Nav({ route, go }) {
               key={k}
               href={`#${k}`}
               className={route === k ? "active" : ""}
-              onClick={(e) => { e.preventDefault(); go(k); }}
+              onClick={handle(k)}
             >
               {label}
             </a>
           ))}
         </nav>
+        <button
+          className={cx("nav-toggle", open && "open")}
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
+      {open && (
+        <nav className="nav-panel">
+          {items.map(([k, label]) => (
+            <a
+              key={k}
+              href={`#${k}`}
+              className={route === k ? "active" : ""}
+              onClick={handle(k)}
+            >
+              {label}
+            </a>
+          ))}
+        </nav>
+      )}
     </div>
   );
 }

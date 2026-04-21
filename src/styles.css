@@ -513,8 +513,47 @@ body.dark .nav { background: color-mix(in oklch, var(--paper) 88%, transparent);
 /* ----- Path here (home) ----- */
 .path-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 
+/* ----- Nav toggle (hamburger) ----- */
+.nav-toggle {
+  display: none;
+  width: 40px; height: 40px;
+  background: transparent; border: 0; padding: 0;
+  cursor: pointer;
+  position: relative;
+}
+.nav-toggle span {
+  position: absolute; left: 8px; right: 8px; height: 2px;
+  background: var(--ink);
+  transition: transform .2s ease, opacity .2s ease, top .2s ease;
+}
+.nav-toggle span:nth-child(1) { top: 13px; }
+.nav-toggle span:nth-child(2) { top: 19px; }
+.nav-toggle span:nth-child(3) { top: 25px; }
+.nav-toggle.open span:nth-child(1) { top: 19px; transform: rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { top: 19px; transform: rotate(-45deg); }
+
+.nav-panel {
+  display: none;
+  flex-direction: column;
+  padding: 8px var(--gutter) 16px;
+  border-top: 1px solid rgba(26,26,26,0.08);
+  background: var(--paper);
+}
+.nav-panel a {
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--mid);
+  border-bottom: 1px solid rgba(26,26,26,0.06);
+}
+.nav-panel a:last-child { border-bottom: 0; }
+.nav-panel a.active { color: var(--ink); }
+
 /* ----- Responsive ----- */
 @media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .nav-panel { display: flex; }
   .hero-grid { grid-template-columns: 1fr; }
   .avatar { width: 120px; height: 120px; order: -1; }
   .meta-strip { grid-template-columns: 1fr 1fr; }
