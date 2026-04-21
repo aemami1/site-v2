@@ -244,7 +244,7 @@ window.GROUP = {
     // PhD students
     { name: "Sadeen Alsabbagh", role: "PhD, incoming Fall 2026" },
     { name: "Abhya Reddy Ambati", role: "PhD, Spring 2026 – Present" },
-    { name: "Winston Zeng", role: "PhD, Spring 2026 – Present", note: "Co-supervised with Prof. Jinho Choi" },
+    { name: "Winston Zeng", role: "PhD, Spring 2026 – Present", note: "Rotation project" },
     // MSc students
     { name: "Rajiv Chilla", role: "MSc, Spring 2026 – Present" },
     { name: "Tyler McDonald", role: "MSc, Fall 2025 – Present", note: "NSERC USRA" },
