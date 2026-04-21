@@ -91,11 +91,27 @@ function Hero({ go }) {
               <em>whose right</em> it is getting, across reasoning, culture, and society.
             </p>
           </div>
-          <div
-            className="avatar"
-            style={{ backgroundImage: "url(assets/avatar.jpg)" }}
-            aria-label="Ali Emami"
-          />
+          <div className="hero-side">
+            <div
+              className="avatar"
+              style={{ backgroundImage: "url(assets/avatar.jpg)" }}
+              aria-label="Ali Emami"
+            />
+            <div className="socials">
+              <a href="https://scholar.google.ca/citations?hl=en&user=Pjdq8cUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noreferrer" aria-label="Google Scholar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L0 9l4.5 3v6L12 23l7.5-5v-6L24 9 12 1zm0 2.236L21.764 9 12 15.764 2.236 9 12 3.236zM6 13.5l6 4 6-4v3.5l-6 4-6-4v-3.5z"/></svg>
+                <span>Scholar</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ali-emami-226b30280/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://x.com/_aliemami" target="_blank" rel="noreferrer" aria-label="X / Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>X</span>
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="meta-strip">
