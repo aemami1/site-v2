@@ -105,7 +105,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 1fr clamp(220px, 18vw, 320px);
   gap: 48px;
   align-items: start;
 }
@@ -170,8 +170,9 @@ ul { margin: 0; padding: 0; list-style: none; }
   padding: 0 1px;
 }
 .avatar {
-  width: 180px; height: 180px;
-  border-radius: 50%;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 6px;
   background-size: cover; background-position: center;
   border: 1px solid rgba(26,26,26,0.1);
   box-shadow:
@@ -181,10 +182,11 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .avatar::after {
   content: "";
-  position: absolute; inset: -8px;
+  position: absolute;
+  inset: -6px -6px -18px -6px;
   border: 1px dashed rgba(160,58,44,0.25);
-  border-radius: 50%;
-  animation: slowspin 80s linear infinite;
+  border-radius: 8px;
+  pointer-events: none;
 }
 @keyframes slowspin { to { transform: rotate(360deg); } }
 
@@ -588,7 +590,12 @@ body.dark .nav { background: color-mix(in oklch, var(--paper) 88%, transparent);
   .nav-panel { display: flex; }
   .hero-grid { grid-template-columns: 1fr; justify-items: center; text-align: center; }
   .hero-side { order: -1; }
-  .avatar { width: 160px; height: 160px; }
+  .avatar {
+    width: 160px; height: 160px;
+    aspect-ratio: auto;
+    border-radius: 50%;
+  }
+  .avatar::after { border-radius: 50%; inset: -8px; }
   .meta-strip { grid-template-columns: 1fr 1fr; }
   .section-head { grid-template-columns: 1fr; gap: 8px; }
   .feature { grid-template-columns: 50px 1fr; }
