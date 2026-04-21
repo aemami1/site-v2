@@ -41,7 +41,10 @@ window.FEATURED = [
     authors: ["Sangmitra Madhusudan", "Tanmay S. More", "Silvia Buongiorno", "Renata Dividino", "Jad Kabbara", "Ali Emami"],
     blurb: "\"Common sense\" isn't. A benchmark across India's regions shows LLMs encode a narrow slice of cultural knowledge and fail systematically outside it.",
     tag: "Culture · Bias",
-    links: {},
+    links: {
+      arxiv: "https://arxiv.org/abs/2601.15550",
+      data: "https://huggingface.co/datasets/Sangmitra-06/INDICA",
+    },
   },
   {
     id: "dart",
@@ -61,7 +64,10 @@ window.FEATURED = [
     authors: ["Xiangbo Zhang", "Ali Emami"],
     blurb: "Memorization isn't a bug or a feature, it's a dial. A training framework for turning it up or down where it matters.",
     tag: "Methods · Interpretability",
-    links: {},
+    links: {
+      arxiv: "https://arxiv.org/abs/2604.05074",
+      code: "https://github.com/xiangbo05/MemoryDial_Public",
+    },
   },
   {
     id: "dog-cat",
