@@ -247,10 +247,10 @@ window.GROUP = {
     { name: "Winston Zeng", role: "PhD, Spring 2026 – Present", note: "Rotation project" },
     // MSc students
     { name: "Rajiv Chilla", role: "MSc, Spring 2026 – Present" },
-    { name: "Tyler McDonald", role: "MSc, Fall 2025 – Present", note: "NSERC USRA" },
-    { name: "Sangmitra Madhusudan", role: "MSc, Fall 2025 – Present" },
     { name: "Robert Morabito", role: "MSc, 2024 – Present" },
     { name: "Kaige Chen", role: "MSc, Fall 2024 – Present" },
+    { name: "Sangmitra Madhusudan", role: "MSc, Fall 2025 – Present", note: "Vector Scholarship" },
+    { name: "Tyler McDonald", role: "MSc, Fall 2025 – Present", note: "Vector Scholarship" },
     // Undergraduate researchers at Emory
     { name: "Tom Suo", role: "Undergraduate, Emory CS" },
     { name: "Charitra Viswanath", role: "Undergraduate, Emory CS" },
