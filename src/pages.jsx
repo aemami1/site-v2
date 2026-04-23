@@ -228,7 +228,7 @@ function GroupPage() {
           <div className="apply">
             <h3>How to <em>actually</em> get in touch.</h3>
             <p>
-              I'm not formally recruiting for a specific term right now, but I'm always open to hearing from students whose interests genuinely align with the group. Email me at <code>aemami[at]emory.edu</code> with subject line{" "}
+              I'm always open to hearing from students whose interests genuinely align with the group. Email me at <code>aemami[at]emory.edu</code> with subject line{" "}
               <code>[Prospective Student]</code>.
             </p>
             <ul className="checklist">
