@@ -187,8 +187,8 @@ window.PUBLICATIONS = [
 // News (curated subset, the "headline" moments).
 window.NEWS = [
   { year: 2026, date: "Apr 2026", text: "Six papers accepted at ACL 2026 (3 Main, 3 Findings). Topics: search-augmented evaluation, regional cultural commonsense in India, reasoning traces, harm drift, controllable memorization, and privacy-preserving QA over glucose data.", highlight: true },
-  { year: 2026, date: "Apr 2026", text: "\"Common to Whom? Regional Cultural Commonsense and LLM Bias in India\" (ACL 2026 Main) — preprint and INDICA benchmark released.", links: { arxiv: "https://arxiv.org/abs/2601.15550", data: "https://huggingface.co/datasets/Sangmitra-06/INDICA" } },
-  { year: 2026, date: "Apr 2026", text: "\"Memory Dial: A Training Framework for Controllable Memorization in Language Models\" (ACL 2026 Findings) — preprint and code released.", links: { arxiv: "https://arxiv.org/abs/2604.05074", code: "https://github.com/xiangbo05/MemoryDial_Public" } },
+  { year: 2026, date: "Apr 2026", text: "\"Common to Whom? Regional Cultural Commonsense and LLM Bias in India\" (ACL 2026 Main): preprint and INDICA benchmark released.", links: { arxiv: "https://arxiv.org/abs/2601.15550", data: "https://huggingface.co/datasets/Sangmitra-06/INDICA" } },
+  { year: 2026, date: "Apr 2026", text: "\"Memory Dial: A Training Framework for Controllable Memorization in Language Models\" (ACL 2026 Findings): preprint and code released.", links: { arxiv: "https://arxiv.org/abs/2604.05074", code: "https://github.com/xiangbo05/MemoryDial_Public" } },
   { year: 2026, date: "Feb 2026", text: "\"The Dog the Cat Chased Stumped the Model\" accepted to EACL 2026 Main Conference.", link: "https://arxiv.org/abs/2510.20543" },
   { year: 2025, date: "Sep 2025", text: "Taarof paper featured in IBM Think, Ars Technica, and PC Gamer.", link: "https://www.ibm.com/think/news/persian-politeness-test-ai-cant-pass", highlight: true },
   { year: 2025, date: "Aug 2025", text: "All three submissions accepted to EMNLP 2025: 2 Main, 1 Findings." },

@@ -149,7 +149,7 @@ function Recruit({ go }) {
           <div className="recruit-body">
             <div className="title">Open to prospective students</div>
             <div className="sub">
-              I'm always happy to hear from students whose interests align with the group — evaluation, cultural competence, and interpretability especially.
+              I'm always happy to hear from students whose interests align with the group, especially in evaluation, cultural competence, and interpretability.
             </div>
           </div>
           <a className="recruit-cta" href="#group" onClick={(e) => { e.preventDefault(); go("group"); }}>
