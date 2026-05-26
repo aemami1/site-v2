@@ -153,8 +153,10 @@ window.PUBLICATIONS = [
   { id: "cgm", year: 2026, title: "If Only My CGM Could Speak: A Privacy-Preserving Agent for Question Answering over Continuous Glucose Data", authors: ["Yanjun Cui", "Ali Emami", "Temiloluwa Prioleau", "Nikhil Singh"], venue: "ACL 2026 Findings", tag: "Applied", links: { arxiv: "https://arxiv.org/abs/2604.17133" } },
   // EACL 2026
   { id: "dog-cat", year: 2026, title: "The Dog the Cat Chased Stumped the Model: Measuring When Language Models Abandon Structure for Shortcuts", authors: ["Sangmitra Madhusudan", "Kaige Chen", "Ali Emami"], venue: "EACL 2026", tag: "Reasoning", links: { arxiv: "https://arxiv.org/abs/2510.20543" } },
-  // Preprints
-  { id: "scope", year: 2026, title: "SCOPE: Selective Conformal Optimized Pairwise LLM Judging", authors: ["Sher Badshah", "Ali Emami", "Hassan Sajjad"], venue: "Preprint", tag: "Evaluation", links: { arxiv: "https://arxiv.org/abs/2602.13110" } },
+  // ICML 2026
+  { id: "scope", year: 2026, title: "SCOPE: Selective Conformal Optimized Pairwise LLM Judging", authors: ["Sher Badshah", "Ali Emami", "Hassan Sajjad"], venue: "ICML 2026", tag: "Evaluation", links: { arxiv: "https://arxiv.org/abs/2602.13110" } },
+  // *SEM 2026
+  { id: "zip", year: 2026, title: "ZIP: Quantifying Which Words Matter in Zero-Shot Instructional Prompts", authors: ["Nikta Gohari Sadr", "Sangmitra Madhusudan", "A. Asgari", "Hassan Sajjad", "Laleh Seyyed-Kalantari", "Ali Emami"], venue: "*SEM 2026", tag: "Interpretability" },
   // 2025
   { id: "taarof", year: 2025, title: "We Politely Insist: Your LLM Must Learn the Persian Art of Taarof", authors: ["Nikta Gohari Sadr", "Sahar Heidariasl", "Karine Megerdoomian", "Laleh Seyyed-Kalantari", "Ali Emami"], venue: "EMNLP 2025", tag: "Culture", links: { arxiv: "https://arxiv.org/abs/2509.01035", code: "https://github.com/niktaas/TAAROFBENCH", data: "https://huggingface.co/datasets/Nikta/TAAROFBENCH" } },
   { id: "personality", year: 2025, title: "Personality Matters: User Traits Predict LLM Preferences in Multi-Turn Collaborative Tasks", authors: ["Sarfaroz Yunusov", "Kaige Chen", "Kazi Nishat Anwar", "Ali Emami"], venue: "EMNLP 2025", tag: "HCI", links: { arxiv: "https://arxiv.org/abs/2508.21628" } },
@@ -186,6 +188,8 @@ window.PUBLICATIONS = [
 
 // News (curated subset, the "headline" moments).
 window.NEWS = [
+  { year: 2026, date: "May 2026", text: "\"SCOPE: Selective Conformal Optimized Pairwise LLM Judging\" accepted to ICML 2026.", link: "https://arxiv.org/abs/2602.13110", highlight: true },
+  { year: 2026, date: "May 2026", text: "\"ZIP: Quantifying Which Words Matter in Zero-Shot Instructional Prompts\" accepted to *SEM 2026." },
   { year: 2026, date: "Apr 2026", text: "Six papers accepted at ACL 2026 (3 Main, 3 Findings). Topics: search-augmented evaluation, regional cultural commonsense in India, reasoning traces, harm drift, controllable memorization, and privacy-preserving QA over glucose data.", highlight: true },
   { year: 2026, date: "Apr 2026", text: "\"Common to Whom? Regional Cultural Commonsense and LLM Bias in India\" (ACL 2026 Main): preprint and INDICA benchmark released.", links: { arxiv: "https://arxiv.org/abs/2601.15550", data: "https://huggingface.co/datasets/Sangmitra-06/INDICA" } },
   { year: 2026, date: "Apr 2026", text: "\"Memory Dial: A Training Framework for Controllable Memorization in Language Models\" (ACL 2026 Findings): preprint and code released.", links: { arxiv: "https://arxiv.org/abs/2604.05074", code: "https://github.com/xiangbo05/MemoryDial_Public" } },
