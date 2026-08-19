@@ -21,14 +21,14 @@ function PublicationsPage() {
 
   return (
     <div>
-      <section className="section" style={{ paddingTop: 64, paddingBottom: 28 }}>
+      <section className="section page-head">
         <div className="wrap">
-          <div className="kicker">§ Publications</div>
-          <h1 style={{ fontFamily: "var(--serif)", fontWeight: 400, fontSize: "clamp(36px,5vw,60px)", letterSpacing: "-0.02em", lineHeight: 1.05, margin: "12px 0 16px", maxWidth: "22ch" }}>
-            Papers, <em style={{ color: "var(--accent)" }}>benchmarks</em>, and <em style={{ color: "var(--accent)" }}>experiments</em>.
+          <div className="kicker">Research</div>
+          <h1 className="page-h1">
+            Publications
           </h1>
-          <p style={{ fontFamily: "var(--serif)", fontSize: 19, color: "var(--ink-2)", maxWidth: "60ch", margin: 0 }}>
-            Across reasoning, evaluation, fairness, culture, and applied AI. Filter by topic or search by keyword.
+          <p className="page-sub">
+            Filter by topic, or search by title, author, or venue.
           </p>
         </div>
       </section>
@@ -45,7 +45,7 @@ function PublicationsPage() {
               value={q}
               onChange={e => setQ(e.target.value)}
               placeholder="Search title, author, venue..."
-              style={{ marginLeft: "auto", background: "transparent", border: "1px solid rgba(26,26,26,0.2)", padding: "8px 12px", fontFamily: "var(--mono)", fontSize: 12, width: 240, color: "var(--ink)" }}
+              className="pub-search"
             />
           </div>
 
@@ -76,7 +76,7 @@ function PublicationsPage() {
               </React.Fragment>
             ))}
             {filtered.length === 0 && (
-              <div style={{ padding: 40, textAlign: "center", color: "var(--mid)", fontFamily: "var(--mono)", fontSize: 13 }}>
+              <div style={{ padding: 40, textAlign: "center", color: "var(--mid)", fontSize: 13 }}>
                 No papers match. Try a different filter.
               </div>
             )}
@@ -93,21 +93,34 @@ function GroupPage() {
     <div>
       <section className="section group-hero">
         <div className="wrap">
-          <div className="kicker">§ Group & prospective students</div>
+          <div className="kicker">Group</div>
           <h1>
-            Come build things that make AI <em>worthy of trust</em>.
+            Group and prospective students
           </h1>
           <p className="lede">
-            I lead an interdisciplinary group at Emory at the intersection of
-            NLP, AI safety, human-centered AI, and AI4Health. We care about what models
-            actually do, underneath the benchmark numbers.
+            We study how large language models behave: their reasoning, their safety and fairness,
+            their reliability across contexts and cultures, and the mechanisms behind their outputs.
+            The group sits at the intersection of NLP, AI safety, human-centered AI, and AI for health.
           </p>
+        </div>
+      </section>
+
+      <section className="section" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="wrap">
+          <div className="photos">
+            <div className="photo" style={{ backgroundImage: "url(assets/group.jpg)" }}>
+              <div className="cap">Jun 2024 · Niagara Falls</div>
+            </div>
+            <div className="photo" style={{ backgroundImage: "url(assets/acl.jpg)" }}>
+              <div className="cap">Aug 2024 · ACL, Bangkok</div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section className="section" style={{ paddingTop: 24 }}>
         <div className="wrap">
-          <SectionHead label="§ 01 · Research directions" title="What we work on." />
+          <SectionHead label="Research directions" title="What we work on" />
           <div className="pillars">
             {[
               ["Reasoning & Evaluation", "Benchmarks that push AI reasoning and reveal failure modes."],
@@ -128,7 +141,7 @@ function GroupPage() {
 
       <section className="section" style={{ paddingTop: 32 }}>
         <div className="wrap">
-          <SectionHead label="§ 02 · The team" title="Current & past." />
+          <SectionHead label="People" title="Members" />
           {(() => {
             const tierOf = (role = "") => {
               if (/^PhD/i.test(role)) return "phd";
@@ -177,23 +190,10 @@ function GroupPage() {
 
       <section className="section" style={{ paddingTop: 24 }}>
         <div className="wrap">
-          <div className="photos">
-            <div className="photo" style={{ backgroundImage: "url(assets/group.jpg)" }}>
-              <div className="cap">Jun 2024 · Niagara Falls</div>
-            </div>
-            <div className="photo" style={{ backgroundImage: "url(assets/acl.jpg)" }}>
-              <div className="cap">Aug 2024 · ACL, Bangkok</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" style={{ paddingTop: 24 }}>
-        <div className="wrap">
-          <SectionHead label="§ 03 · What I look for" title="Strong candidates usually bring" />
+          <SectionHead label="Prospective students" title="What I look for" />
           <div className="looking-for">
             <div className="lf-card">
-              <div className="h">🧠 Technical foundation</div>
+              <div className="h">Technical foundation</div>
               <ul>
                 <li>Strong programming (Python preferred)</li>
                 <li>Experience with ML / DL frameworks</li>
@@ -201,7 +201,7 @@ function GroupPage() {
               </ul>
             </div>
             <div className="lf-card">
-              <div className="h">📝 Research skills</div>
+              <div className="h">Research skills</div>
               <ul>
                 <li>Clear technical writing (a dying art)</li>
                 <li>Critical thinking about AI systems' limitations</li>
@@ -209,7 +209,7 @@ function GroupPage() {
               </ul>
             </div>
             <div className="lf-card">
-              <div className="h">💡 Intellectual curiosity</div>
+              <div className="h">Intellectual curiosity</div>
               <ul>
                 <li>Interdisciplinary interests across AI & society</li>
                 <li>Enthusiasm for both building and understanding</li>
@@ -218,7 +218,7 @@ function GroupPage() {
             </div>
           </div>
           <p style={{ fontSize: 14, color: "var(--mid)", marginTop: 20 }}>
-            <em>Bonus:</em> Prior NLP/LLM experience, main conference publications (ACL, EMNLP…), user study experience, or demonstrated interest in AI ethics/fairness.
+            <strong>Bonus:</strong> Prior NLP/LLM experience, main conference publications (ACL, EMNLP…), user study experience, or demonstrated interest in AI ethics/fairness.
           </p>
         </div>
       </section>
@@ -226,7 +226,7 @@ function GroupPage() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="apply">
-            <h3>How to <em>actually</em> get in touch.</h3>
+            <h3>Getting in touch</h3>
             <p>
               I'm always open to hearing from students whose interests genuinely align with the group. Email me at <code>aemami[at]emory.edu</code> with subject line{" "}
               <code>[Prospective Student]</code>.
@@ -237,8 +237,8 @@ function GroupPage() {
               <li>Any NLP / ML / AI ethics experience or coursework</li>
               <li>(Optional) A paper or project you're proud of</li>
             </ul>
-            <p style={{ marginTop: 20, fontSize: 14, color: "rgba(250,247,242,0.75)" }}>
-              Pro tip: I like emails that read like they were genuinely, succinctly written by <em>you</em>. After seeing many, I insist on this.
+            <p style={{ marginTop: 20, fontSize: 14, color: "rgba(255,255,255,0.75)" }}>
+              Please write the email yourself, and keep it short. It is easy to tell.
             </p>
             <p style={{ marginTop: 20, fontSize: 14 }}>
               Formal applications go through the{" "}
@@ -258,21 +258,21 @@ function GroupPage() {
 function TeachingTalksPage() {
   return (
     <div>
-      <section className="section" style={{ paddingTop: 64, paddingBottom: 28 }}>
+      <section className="section page-head">
         <div className="wrap">
-          <div className="kicker">§ Teaching & Talks</div>
-          <h1 style={{ fontFamily: "var(--serif)", fontWeight: 400, fontSize: "clamp(36px,5vw,60px)", letterSpacing: "-0.02em", lineHeight: 1.05, margin: "12px 0 16px", maxWidth: "20ch" }}>
-            The <em style={{ color: "var(--accent)" }}>classroom</em> and the <em style={{ color: "var(--accent)" }}>stage</em>.
+          <div className="kicker">Teaching & Talks</div>
+          <h1 className="page-h1">
+            Teaching and talks
           </h1>
-          <p style={{ fontFamily: "var(--serif)", fontSize: 19, color: "var(--ink-2)", maxWidth: "60ch", margin: 0 }}>
-            Courses I've designed or taught, and talks I've given, from graduate seminars to performing arts centres.
+          <p className="page-sub">
+            Courses at Emory and Brock, and invited talks, keynotes, and panels.
           </p>
         </div>
       </section>
 
       <section className="section" style={{ paddingTop: 24 }}>
         <div className="wrap">
-          <SectionHead label="§ 01 · Courses" title="New courses marked in red. Many designed from scratch." />
+          <SectionHead label="Courses" title="Courses taught" />
           <div className="courses">
             {window.COURSES.map((c, i) => (
               <div className="row" key={i}>
@@ -293,7 +293,7 @@ function TeachingTalksPage() {
 
       <section className="section">
         <div className="wrap">
-          <SectionHead label="§ 02 · Invited talks & keynotes" title="Where I've spoken." />
+          <SectionHead label="Talks" title="Invited talks" />
           <div className="talks-list">
             {window.TALKS.map((t, i) => (
               <div className="row" key={i}>
@@ -320,15 +320,12 @@ function NewsPage() {
 
   return (
     <div>
-      <section className="section" style={{ paddingTop: 64, paddingBottom: 28 }}>
+      <section className="section page-head">
         <div className="wrap">
-          <div className="kicker">§ News</div>
-          <h1 style={{ fontFamily: "var(--serif)", fontWeight: 400, fontSize: "clamp(36px,5vw,60px)", letterSpacing: "-0.02em", lineHeight: 1.05, margin: "12px 0 16px", maxWidth: "20ch" }}>
-            What's been <em style={{ color: "var(--accent)" }}>happening</em>.
+          <div className="kicker">News</div>
+          <h1 className="page-h1">
+            News
           </h1>
-          <p style={{ fontFamily: "var(--serif)", fontSize: 19, color: "var(--ink-2)", maxWidth: "60ch", margin: 0 }}>
-            Acceptances, awards, press, and the occasional convocation address. Highlighted items are particularly meaningful.
-          </p>
         </div>
       </section>
 
@@ -336,9 +333,9 @@ function NewsPage() {
         <div className="wrap">
           {years.map(y => (
             <div key={y} style={{ marginBottom: 48 }}>
-              <div style={{ display: "grid", gridTemplateColumns: "120px 1fr", gap: 24, paddingBottom: 12, borderBottom: "1px solid var(--ink)", marginBottom: 8 }}>
-                <div style={{ fontFamily: "var(--serif)", fontSize: 32, color: "var(--ink)", fontWeight: 400 }}>{y}</div>
-                <div style={{ fontFamily: "var(--mono)", fontSize: 11, color: "var(--mid)", letterSpacing: 0.14, textTransform: "uppercase", alignSelf: "end", paddingBottom: 8 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "110px 1fr", gap: 24, paddingBottom: 10, borderBottom: "1px solid var(--ink)", marginBottom: 6 }}>
+                <div style={{ fontFamily: "var(--serif)", fontSize: 24, color: "var(--ink)", fontWeight: 500, letterSpacing: "-0.02em" }}>{y}</div>
+                <div style={{ fontSize: 12, color: "var(--mid)", alignSelf: "end", paddingBottom: 4 }}>
                   {byYear[y].length} entries
                 </div>
               </div>
@@ -371,22 +368,21 @@ function ContactPage() {
     <div>
       <section className="section contact">
         <div className="wrap">
-          <div className="kicker">§ Contact</div>
+          <div className="kicker">Contact</div>
           <div className="contact-grid" style={{ marginTop: 20 }}>
             <div>
               <div className="contact-big">
-                Say <em>hello</em>.<br />
-                <span style={{ color: "var(--mid)" }}>Or, more practically,</span>
+                Contact
               </div>
-              <p style={{ fontFamily: "var(--serif)", fontSize: 18, color: "var(--ink-2)", marginTop: 24, maxWidth: "50ch" }}>
+              <p style={{ fontSize: 16, color: "var(--ink-2)", marginTop: 24, maxWidth: "52ch", lineHeight: 1.6 }}>
                 The fastest way to reach me is email. I don't hold regular office hours; please book a time if we need to talk.
-                For prospective students, please read the <a href="#group" style={{ borderBottom: "1px solid var(--accent)", color: "var(--accent)" }}>Group page</a> first.
+                For prospective students, please read the <a href="#group" style={{ color: "var(--accent)", textDecoration: "underline", textUnderlineOffset: 3 }}>Group page</a> first.
               </p>
-              <div style={{ fontFamily: "var(--mono)", fontSize: 12, color: "var(--mid)", marginTop: 24, lineHeight: 1.8, letterSpacing: 0.04 }}>
-                GOODRICH C. WHITE HALL, ROOM 215<br />
-                301 DOWMAN DRIVE<br />
-                ATLANTA, GA 30322<br />
-                UNITED STATES
+              <div style={{ fontSize: 14, color: "var(--mid)", marginTop: 24, lineHeight: 1.7 }}>
+                Goodrich C. White Hall, Room 215<br />
+                301 Dowman Drive<br />
+                Atlanta, GA 30322<br />
+                United States
               </div>
             </div>
             <div>

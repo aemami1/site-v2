@@ -153,9 +153,9 @@ window.PUBLICATIONS = [
   { id: "cgm", year: 2026, title: "If Only My CGM Could Speak: A Privacy-Preserving Agent for Question Answering over Continuous Glucose Data", authors: ["Yanjun Cui", "Ali Emami", "Temiloluwa Prioleau", "Nikhil Singh"], venue: "ACL 2026 Findings", tag: "Applied", links: { arxiv: "https://arxiv.org/abs/2604.17133" } },
   // EACL 2026
   { id: "dog-cat", year: 2026, title: "The Dog the Cat Chased Stumped the Model: Measuring When Language Models Abandon Structure for Shortcuts", authors: ["Sangmitra Madhusudan", "Kaige Chen", "Ali Emami"], venue: "EACL 2026", tag: "Reasoning", links: { arxiv: "https://arxiv.org/abs/2510.20543" } },
-  // ICML 2026
+  // COLM / ICML / *SEM 2026
+  { id: "judge-retrieve-abstain", year: 2026, title: "Judge, Retrieve, or Abstain: Uncertainty-Guided LLM Judging with Provable Risk Guarantees", authors: ["Sher Badshah", "Ali Emami", "Hassan Sajjad"], venue: "COLM 2026", tag: "Evaluation" },
   { id: "scope", year: 2026, title: "SCOPE: Selective Conformal Optimized Pairwise LLM Judging", authors: ["Sher Badshah", "Ali Emami", "Hassan Sajjad"], venue: "ICML 2026", tag: "Evaluation", links: { arxiv: "https://arxiv.org/abs/2602.13110" } },
-  // *SEM 2026
   { id: "zip", year: 2026, title: "ZIP: Quantifying Which Words Matter in Zero-Shot Instructional Prompts", authors: ["Nikta Gohari Sadr", "Sangmitra Madhusudan", "A. Asgari", "Hassan Sajjad", "Laleh Seyyed-Kalantari", "Ali Emami"], venue: "*SEM 2026", tag: "Interpretability" },
   // 2025
   { id: "taarof", year: 2025, title: "We Politely Insist: Your LLM Must Learn the Persian Art of Taarof", authors: ["Nikta Gohari Sadr", "Sahar Heidariasl", "Karine Megerdoomian", "Laleh Seyyed-Kalantari", "Ali Emami"], venue: "EMNLP 2025", tag: "Culture", links: { arxiv: "https://arxiv.org/abs/2509.01035", code: "https://github.com/niktaas/TAAROFBENCH", data: "https://huggingface.co/datasets/Nikta/TAAROFBENCH" } },
@@ -188,6 +188,8 @@ window.PUBLICATIONS = [
 
 // News (curated subset, the "headline" moments).
 window.NEWS = [
+  { year: 2026, date: "Aug 2026", text: "Received the EMNLP 2026 Outstanding Senior Area Chair Award.", highlight: true },
+  { year: 2026, date: "Jul 2026", text: "\"Judge, Retrieve, or Abstain: Uncertainty-Guided LLM Judging with Provable Risk Guarantees\" accepted to COLM 2026." },
   { year: 2026, date: "May 2026", text: "\"SCOPE: Selective Conformal Optimized Pairwise LLM Judging\" accepted to ICML 2026.", link: "https://arxiv.org/abs/2602.13110", highlight: true },
   { year: 2026, date: "May 2026", text: "\"ZIP: Quantifying Which Words Matter in Zero-Shot Instructional Prompts\" accepted to *SEM 2026." },
   { year: 2026, date: "Apr 2026", text: "Six papers accepted at ACL 2026 (3 Main, 3 Findings). Topics: search-augmented evaluation, regional cultural commonsense in India, reasoning traces, harm drift, controllable memorization, and privacy-preserving QA over glucose data.", highlight: true },
@@ -227,6 +229,7 @@ window.TALKS = [
 
 // Courses — grouped by year.
 window.COURSES = [
+  { year: 2026, term: "Fall", code: "CS 312", title: "Computing, AI, Ethics, and Society", desc: "Privacy, disinformation, ownership, fairness, and bias in computing and AI." },
   { year: 2025, term: "Fall", code: "CS 312", title: "Computing, AI, Ethics, and Society", desc: "Privacy, disinformation, ownership, fairness, and bias in computing and AI." },
   { year: 2025, term: "Fall", code: "COSC 4P84", title: "Introduction to Natural Language Processing", desc: "Algorithms and recent advances in NLP.", newCourse: true },
   { year: 2025, term: "Winter", code: "COSC 1P71", title: "Essentials of Artificial Intelligence", desc: "AI principles, ML models, real-world applications.", newCourse: true },
@@ -246,7 +249,7 @@ window.COURSES = [
 window.GROUP = {
   current: [
     // PhD students
-    { name: "Sadeen Alsabbagh", role: "PhD, incoming Fall 2026" },
+    { name: "Sadeen Alsabbagh", role: "PhD, Fall 2026 – Present" },
     { name: "Abhya Reddy Ambati", role: "PhD, Spring 2026 – Present" },
     { name: "Winston Zeng", role: "PhD, Spring 2026 – Present", note: "Rotation project" },
     // MSc students
@@ -254,16 +257,17 @@ window.GROUP = {
     { name: "Robert Morabito", role: "MSc, 2024 – Present" },
     { name: "Kaige Chen", role: "MSc, Fall 2024 – Present" },
     { name: "Sangmitra Madhusudan", role: "MSc, Fall 2025 – Present", note: "Vector Scholarship" },
-    { name: "Tyler McDonald", role: "MSc, Fall 2025 – Present", note: "Vector Scholarship" },
     // Undergraduate researchers at Emory
     { name: "Tom Suo", role: "Undergraduate, Emory CS" },
-    { name: "Charitra Viswanath", role: "Undergraduate, Emory CS" },
     { name: "Aurora Wu", role: "Undergraduate, Emory CS" },
     { name: "Liam Neild", role: "Undergraduate, Emory CS" },
     { name: "Shuyang Yu", role: "Undergraduate, Emory CS" },
     { name: "Xiangbo Zhang", role: "Undergraduate, Georgia Tech / Emory CS intern" },
   ],
   alumni: [
+    { name: "Tyler McDonald", role: "MSc, Brock (2025–2026); Vector Scholarship" },
+    { name: "Phoebe Pan", role: "Undergraduate, Emory CS (2025–2026)" },
+    { name: "Zihan Liang", role: "Undergraduate, Emory CS (2025–2026)" },
     { name: "Nikta Gohari Sadr", role: "MSc, Brock (2023–2025)" },
     { name: "Sarfaroz Yunusov", role: "MSc, Brock (2023–2025)" },
     { name: "Abhishek Kumar", role: "MSc, Brock (2023–2024)" },

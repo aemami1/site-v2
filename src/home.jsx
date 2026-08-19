@@ -75,20 +75,20 @@ function Nav({ route, go }) {
 // -------- Hero --------
 function Hero({ go }) {
   return (
-    <section className="section" style={{ paddingTop: 24 }}>
+    <section className="section hero-band" style={{ paddingTop: 0, paddingBottom: 0 }}>
       <div className="wrap">
         <div className="hero hero-grid">
           <div>
             <div className="kicker">Assistant Professor · Emory University</div>
             <h1>
-              I study how language models <em>reason</em>,<br />
-              <em>generalize</em>, and quietly <em>mirror</em> us.
+              I study large language models: how they reason, how we evaluate them, and what they encode about culture and society.
             </h1>
             <p className="lede">
-              I'm <strong>Ali Emami</strong>, an Assistant Professor of Computer Science at Emory.
-              My group builds <span className="hl">benchmarks, evaluations, and interpretations</span>{" "}
-              that ask not just whether a model gets it right, but{" "}
-              <em>whose right</em> it is getting, across reasoning, culture, and society.
+              I'm <strong>Ali Emami</strong>, Assistant Professor of Computer Science at Emory University.
+              I work in natural language processing, with a focus on the evaluation and interpretability of large language models.
+              My group's research spans commonsense reasoning, AI safety and fairness, cultural analytics,
+              computational social science, and human-AI interaction. We design benchmarks and evaluation methods,
+              and study models' internal behaviour, to understand where they succeed, where they fail, and why.
             </p>
           </div>
           <div className="hero-side">
@@ -183,9 +183,9 @@ function Featured({ go }) {
     <section className="section">
       <div className="wrap">
         <SectionHead
-          label="§ 01 · Selected work"
-          title="Selected work."
-          sub="Recent papers from the group, across culture, fairness, memorization, reasoning, and evaluation."
+          label="Selected work"
+          title="Selected work"
+          sub="A selection of recent papers from the group."
         />
         <div className="feature-list">
           {window.FEATURED.map((p) => (
@@ -220,7 +220,7 @@ function Featured({ go }) {
           <a
             href="#research"
             onClick={(e) => { e.preventDefault(); go("research"); }}
-            style={{ fontFamily: "var(--mono)", fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)", borderBottom: "1px solid var(--accent)", paddingBottom: 2 }}
+            className="more-link"
           >
             See all publications →
           </a>
@@ -236,19 +236,20 @@ function Interests() {
     <section className="section" style={{ paddingTop: 0 }}>
       <div className="wrap">
         <SectionHead
-          label="§ 02 · Research interests"
-          title="What I think about."
+          label="Research interests"
+          title="Research interests"
         />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 18 }}>
           {window.INTERESTS.map((i, idx) => (
             <div
               key={i}
               style={{
-                borderTop: "2px solid var(--ink)",
+                borderTop: "1px solid var(--rule-soft)",
                 paddingTop: 12,
                 fontFamily: "var(--serif)",
-                fontSize: 20,
-                letterSpacing: "-0.005em",
+                fontWeight: 500,
+                fontSize: 17,
+                letterSpacing: "-0.01em",
               }}
             >
               <div className="kicker" style={{ marginBottom: 6 }}>{String(idx + 1).padStart(2, "0")}</div>
@@ -265,11 +266,11 @@ function Interests() {
 function RecentNews({ go }) {
   const latest = window.NEWS.slice(0, 6);
   return (
-    <section className="section" style={{ background: "var(--paper-2)", marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)", paddingLeft: "calc(50vw - 50%)", paddingRight: "calc(50vw - 50%)" }}>
+    <section className="section">
       <div className="wrap">
         <SectionHead
-          label="§ 03 · Dispatches"
-          title="Recent news."
+          label="News"
+          title="Recent news"
         />
         <div>
           {latest.map((n, i) => (
@@ -285,7 +286,7 @@ function RecentNews({ go }) {
           <a
             href="#news"
             onClick={(e) => { e.preventDefault(); go("news"); }}
-            style={{ fontFamily: "var(--mono)", fontSize: 12, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--accent)", borderBottom: "1px solid var(--accent)", paddingBottom: 2 }}
+            className="more-link"
           >
             Full archive →
           </a>
@@ -300,15 +301,15 @@ function Education() {
   return (
     <section className="section">
       <div className="wrap">
-        <SectionHead label="§ 04 · Path here" title="The road to Emory." />
+        <SectionHead label="Background" title="Appointments and education" />
         {(() => {
           const appts = window.EDUCATION.filter(e => e.kind === "appt");
           const edus = window.EDUCATION.filter(e => e.kind !== "appt");
           const Row = (e, i) => (
-            <div key={i} style={{ display: "grid", gridTemplateColumns: "140px 1fr", gap: 24, padding: "16px 0", borderTop: "1px solid rgba(26,26,26,0.1)" }}>
-              <div style={{ fontFamily: "var(--serif)", fontSize: 20, color: "var(--mid-2)" }}>{e.year}</div>
+            <div key={i} style={{ display: "grid", gridTemplateColumns: "110px 1fr", gap: 24, padding: "12px 0", borderTop: "1px solid var(--rule-soft)" }}>
+              <div style={{ fontSize: 14, color: "var(--mid)", fontVariantNumeric: "tabular-nums" }}>{e.year}</div>
               <div>
-                <div style={{ fontFamily: "var(--serif)", fontSize: 18, letterSpacing: "-0.005em" }}>{e.degree}</div>
+                <div style={{ fontFamily: "var(--serif)", fontWeight: 500, fontSize: 16, letterSpacing: "-0.01em" }}>{e.degree}</div>
                 <div style={{ fontSize: 13, color: "var(--mid)", marginTop: 2 }}>{e.inst}</div>
               </div>
             </div>

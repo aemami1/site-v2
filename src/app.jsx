@@ -2,7 +2,7 @@
 const { useState: useStateApp, useEffect: useEffectApp } = React;
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "palette": "warm",
+  "palette": "emory",
   "density": "comfortable",
   "dark": false
 }/*EDITMODE-END*/;
@@ -45,17 +45,12 @@ function App() {
 
   useEffectApp(() => {
     document.body.classList.toggle("dark", !!tweaks.dark);
-    // palette override via CSS variables
-    const palettes = {
-      warm:  { accent: "#a03a2c", accent2: "#c86a4b" },
-      cool:  { accent: "#2c4a7a", accent2: "#5a7fb8" },
-      olive: { accent: "#4a6b3a", accent2: "#6f8c56" },
-      gold:  { accent: "#b8802a", accent2: "#d9a852" },
-    };
-    const p = palettes[tweaks.palette] || palettes.warm;
-    document.documentElement.style.setProperty("--accent", p.accent);
-    document.documentElement.style.setProperty("--accent-2", p.accent2);
+    document.body.setAttribute("data-palette", tweaks.palette || "emory");
   }, [tweaks]);
+
+  // Local-only palette switcher (never shown on the deployed site).
+  const isLocal = typeof window !== "undefined" && /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname);
+  const PALETTES = ["emory", "forest", "ocean", "plum"];
 
   const setTweak = (k, v) => {
     const next = { ...tweaks, [k]: v };
@@ -91,6 +86,14 @@ function App() {
         </div>
       </footer>
 
+      {isLocal && (
+        <div className="palette-switch">
+          {PALETTES.map(k => (
+            <button key={k} className={cx(tweaks.palette === k && "active")} onClick={() => setTweaks({ ...tweaks, palette: k })}>{k}</button>
+          ))}
+        </div>
+      )}
+
       {tweaksOn && (
         <div className={cx("tweaks", tweakOpen && "open")}>
           <div className="tweaks-header" onClick={() => setTweakOpen(!tweakOpen)}>
@@ -102,10 +105,10 @@ function App() {
               <span className="tweak-label">Accent palette</span>
               <div className="swatches">
                 {[
-                  ["warm", "#a03a2c"],
-                  ["cool", "#2c4a7a"],
-                  ["olive", "#4a6b3a"],
-                  ["gold", "#b8802a"],
+                  ["emory", "#0f1b3d"],
+                  ["forest", "#1f5a3a"],
+                  ["ocean", "#0e5a8a"],
+                  ["plum", "#5b2a6e"],
                 ].map(([k, c]) => (
                   <div key={k} className={cx("swatch", tweaks.palette === k && "active")}
                        style={{ background: c }} title={k}
