@@ -229,18 +229,15 @@ window.TALKS = [
 
 // Courses — grouped by year.
 window.COURSES = [
-  { year: 2026, term: "Fall", code: "CS 312", title: "Computing, AI, Ethics, and Society", desc: "Privacy, disinformation, ownership, fairness, and bias in computing and AI." },
-  { year: 2025, term: "Fall", code: "CS 312", title: "Computing, AI, Ethics, and Society", desc: "Privacy, disinformation, ownership, fairness, and bias in computing and AI." },
+  { year: "2025–26", term: "Fall 2025 · Spring 2026 · Fall 2026", code: "CS 312", title: "Computing, AI, Ethics, and Society", desc: "Privacy, disinformation, ownership, fairness, and bias in computing and AI. Emory." },
   { year: 2025, term: "Fall", code: "COSC 4P84", title: "Introduction to Natural Language Processing", desc: "Algorithms and recent advances in NLP.", newCourse: true },
   { year: 2025, term: "Winter", code: "COSC 1P71", title: "Essentials of Artificial Intelligence", desc: "AI principles, ML models, real-world applications.", newCourse: true },
   { year: 2025, term: "Winter", code: "COSC 5P84", title: "Natural Language Processing (Graduate)", desc: "Deep learning models for NLP and their application.", newCourse: true },
   { year: 2024, term: "Winter", code: "COSC 4P84", title: "Introduction to Natural Language Processing", desc: "Algorithms and recent advances in NLP.", newCourse: true },
-  { year: 2024, term: "Fall/Winter", code: "COSC 1P03", title: "Data Structures and Abstraction", desc: "Programming and problem-solving; arrays, linked lists, abstraction." },
+  { year: "2022–24", term: "Winter 2022 · Fall/Winter 2023 · Fall/Winter 2024", code: "COSC 1P03", title: "Data Structures and Abstraction", desc: "Programming and problem-solving; arrays, linked lists, abstraction. Brock." },
   { year: 2023, term: "Winter", code: "COSC 5P84", title: "Natural Language Processing (Graduate)", desc: "Deep learning models for NLP.", newCourse: true },
-  { year: 2023, term: "Fall/Winter", code: "COSC 1P03", title: "Data Structures and Abstraction", desc: "Programming and problem-solving; arrays, linked lists, abstraction." },
   { year: 2023, term: "Fall", code: "COSC 2P89", title: "Internet Technologies", desc: "Essential technologies and protocols for web and internet development." },
   { year: 2022, term: "Winter", code: "COSC 2P05", title: "Programming Languages", desc: "Programming paradigms and their implications." },
-  { year: 2022, term: "Winter", code: "COSC 1P03", title: "Data Structures and Abstraction", desc: "Programming and problem-solving." },
   { year: 2022, term: "Fall", code: "COSC 2P89", title: "Internet Technologies", desc: "Web and internet protocols." },
   { year: 2021, term: "Fall", code: "COSC 2P89", title: "Internet Technologies", desc: "Web and internet protocols." },
 ];

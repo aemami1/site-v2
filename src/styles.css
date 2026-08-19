@@ -384,7 +384,7 @@ h1, h2, h3 { font-weight: 500; color: var(--head); }
 /* ----- Courses ----- */
 .courses .row {
   display: grid;
-  grid-template-columns: 72px 120px 1fr;
+  grid-template-columns: 120px 110px 1fr;
   gap: 20px;
   padding: 14px 0;
   border-top: 1px solid var(--rule-soft);
@@ -396,7 +396,7 @@ h1, h2, h3 { font-weight: 500; color: var(--head); }
 .courses .row .title { font-family: var(--serif); font-weight: 500; font-size: 16px; letter-spacing: -0.01em; }
 .courses .row .title .new { font-size: 10.5px; font-weight: 500; color: var(--accent-2); letter-spacing: 0.06em; text-transform: uppercase; margin-left: 8px; border: 1px solid var(--accent-2); padding: 0 5px; vertical-align: middle; }
 .courses .row .desc { font-size: 13px; color: var(--mid); margin-top: 3px; max-width: 70ch; }
-.courses .row .term { font-size: 12px; color: var(--mid); letter-spacing: 0; text-transform: none; margin-top: 2px; display: block; }
+.courses .row .term { font-size: 12px; color: var(--mid); letter-spacing: 0; text-transform: none; margin-top: 2px; display: block; line-height: 1.45; }
 
 /* ----- Group page ----- */
 .group-hero { padding: 64px 0 24px; }
@@ -584,7 +584,8 @@ body.dark .nav { background: rgba(15,15,17,0.9); }
   .recruit { grid-template-columns: 1fr; }
   .recruit-cta { justify-self: start; }
   .path-cols { grid-template-columns: 1fr; gap: 32px; }
-  .talks-list .row, .courses .row { grid-template-columns: 56px 1fr; }
+  .talks-list .row { grid-template-columns: 56px 1fr; }
+  .courses .row { grid-template-columns: 96px 1fr; }
   .talks-list .row .kind, .courses .row .code { grid-column: 2; }
   .talks-list .row > div:last-child, .courses .row > div:last-child { grid-column: 2; }
   .pubs .year-row { grid-template-columns: 56px 1fr; gap: 16px; }
