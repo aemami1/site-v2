@@ -188,7 +188,7 @@ window.PUBLICATIONS = [
 
 // News (curated subset, the "headline" moments).
 window.NEWS = [
-  { year: 2026, date: "Aug 2026", text: "Received the EMNLP 2026 Outstanding Senior Area Chair Award.", highlight: true },
+  { year: 2026, date: "Jul 2026", text: "Received the ACL 2026 Outstanding Senior Area Chair Award.", link: "https://2026.aclweb.org/program/outstanding_sacs/", highlight: true },
   { year: 2026, date: "Jul 2026", text: "\"Judge, Retrieve, or Abstain: Uncertainty-Guided LLM Judging with Provable Risk Guarantees\" accepted to COLM 2026." },
   { year: 2026, date: "May 2026", text: "\"SCOPE: Selective Conformal Optimized Pairwise LLM Judging\" accepted to ICML 2026.", link: "https://arxiv.org/abs/2602.13110", highlight: true },
   { year: 2026, date: "May 2026", text: "\"ZIP: Quantifying Which Words Matter in Zero-Shot Instructional Prompts\" accepted to *SEM 2026." },
