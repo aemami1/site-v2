@@ -116,7 +116,7 @@ h1, h2, h3 { font-weight: 500; color: var(--head); }
 
 /* ----- Hero ----- */
 .hero {
-  padding: 72px 0 56px;
+  padding: 64px 0 56px;
   position: relative;
 }
 /* Tinted full-bleed band behind the hero */
@@ -169,12 +169,16 @@ h1, h2, h3 { font-weight: 500; color: var(--head); }
 .hero .lede {
   font-family: var(--sans);
   font-weight: 400;
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.6;
-  max-width: 64ch;
-  color: var(--ink-2);
-  margin-top: 26px;
+  max-width: 62ch;
+  color: var(--ink);
+  margin: 0;
 }
+.hero-text { padding-top: 4px; }
+.hero .lede + .lede { margin-top: 18px; }
+.hero .lede a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule-soft); }
+.hero .lede a:hover { text-decoration-color: var(--accent); }
 .hero .lede strong { font-weight: 600; color: var(--ink); }
 .hero .lede .hl { background: none; padding: 0; }
 .avatar {
@@ -347,6 +351,7 @@ h1, h2, h3 { font-weight: 500; color: var(--head); }
 .pubs .body .links { display: flex; gap: 12px; }
 .pubs .body .links a { font-size: 12px; font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--accent); }
 .pubs .body .links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.pubs .body .links .pending { font-size: 12px; color: var(--mid-2); font-style: italic; }
 
 /* ----- News ----- */
 .news { display: grid; grid-template-columns: 120px 1fr; gap: 24px; }
@@ -568,10 +573,12 @@ body.dark .nav { background: rgba(15,15,17,0.9); }
   .nav-links { display: none; }
   .nav-toggle { display: block; }
   .nav-panel { display: flex; }
-  .hero { padding-top: 40px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .hero-side { order: -1; align-items: flex-start; }
-  .avatar { width: 140px; aspect-ratio: 1 / 1; }
+  .hero { padding-top: 36px; padding-bottom: 40px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero-side { order: -1; flex-direction: row; align-items: flex-end; gap: 16px; }
+  .avatar { width: 128px; aspect-ratio: 4 / 5; flex: 0 0 auto; }
+  .socials { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .hero .lede { font-size: 17px; }
   .meta-strip { grid-template-columns: 1fr 1fr; }
   .section-head { grid-template-columns: 1fr; gap: 6px; }
   .feature { grid-template-columns: 56px 1fr; }

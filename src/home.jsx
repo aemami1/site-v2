@@ -78,17 +78,17 @@ function Hero({ go }) {
     <section className="section hero-band" style={{ paddingTop: 0, paddingBottom: 0 }}>
       <div className="wrap">
         <div className="hero hero-grid">
-          <div>
-            <div className="kicker">Assistant Professor · Emory University</div>
-            <h1>
-              I study large language models: how they reason, how we evaluate them, and what they encode about culture and society.
-            </h1>
+          <div className="hero-text">
             <p className="lede">
-              I'm <strong>Ali Emami</strong>, Assistant Professor of Computer Science at Emory University.
+              I am an Assistant Professor of Computer Science at Emory University.
               I work in natural language processing, with a focus on the evaluation and interpretability of large language models.
               My group's research spans commonsense reasoning, AI safety and fairness, cultural analytics,
               computational social science, and human-AI interaction. We design benchmarks and evaluation methods,
               and study models' internal behaviour, to understand where they succeed, where they fail, and why.
+            </p>
+            <p className="lede">
+              I am recruiting PhD students with research experience in machine learning and natural language processing.
+              For how to apply, see the <a href="#group" onClick={(e) => { e.preventDefault(); go("group"); }}>group page</a>.
             </p>
           </div>
           <div className="hero-side">
@@ -110,30 +110,14 @@ function Hero({ go }) {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 <span>X</span>
               </a>
+              <a href="mailto:aemami@emory.edu" aria-label="Email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="M3.5 6.5 12 12.5l8.5-6"/></svg>
+                <span>aemami@emory.edu</span>
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="meta-strip">
-          <div className="item">
-            <div className="k">Role</div>
-            <div className="v">Assistant Professor, CS</div>
-          </div>
-          <div className="item">
-            <div className="k">Institution</div>
-            <div className="v">Emory University</div>
-          </div>
-          <div className="item">
-            <div className="k">Office</div>
-            <div className="v">Goodrich C. White Hall 215</div>
-          </div>
-          <div className="item">
-            <div className="k">Email</div>
-            <div className="v">
-              <a href="mailto:aemami@emory.edu">aemami @ emory.edu</a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -6,7 +6,12 @@ function PublicationsPage() {
   const [tag, setTag] = useState2("All");
   const [q, setQ] = useState2("");
   const pubs = window.PUBLICATIONS;
-  const tags = useMemo2(() => ["All", ...Array.from(new Set(pubs.map(p => p.tag)))], [pubs]);
+  const tags = useMemo2(() => {
+    const counts = {};
+    pubs.forEach(p => { counts[p.tag] = (counts[p.tag] || 0) + 1; });
+    const ordered = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
+    return ["All", ...ordered];
+  }, [pubs]);
 
   const filtered = pubs.filter(p => {
     if (tag !== "All" && p.tag !== tag) return false;
@@ -63,13 +68,13 @@ function PublicationsPage() {
                         <span className="tag">{p.tag}</span>
                         {p.award && <span className="award">{p.award}</span>}
                       </div>
-                      {p.links && (
-                        <div className="links">
-                          {Object.entries(p.links).map(([k, v]) => (
-                            <a key={k} href={v} target="_blank" rel="noreferrer">{k} ↗</a>
-                          ))}
-                        </div>
-                      )}
+                      <div className="links">
+                        {p.links
+                          ? Object.entries(p.links).map(([k, v]) => (
+                              <a key={k} href={v} target="_blank" rel="noreferrer">{k} ↗</a>
+                            ))
+                          : <span className="pending">preprint coming</span>}
+                      </div>
                     </div>
                   </div>
                 ))}

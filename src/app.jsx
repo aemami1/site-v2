@@ -65,8 +65,6 @@ function App() {
       {route === "home" && (
         <>
           <Hero go={go} />
-          <div style={{ height: 8 }} />
-          <Recruit go={go} />
           <Featured go={go} />
           <Interests />
           <RecentNews go={go} />

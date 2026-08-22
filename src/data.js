@@ -40,7 +40,7 @@ window.FEATURED = [
     venue: "ACL 2026",
     authors: ["Sangmitra Madhusudan", "Trush Shank More", "Steph Buongiorno", "Renata Dividino", "Jad Kabbara", "Ali Emami"],
     blurb: "\"Common sense\" isn't. A benchmark across India's regions shows LLMs encode a narrow slice of cultural knowledge and fail systematically outside it.",
-    tag: "Culture · Bias",
+    tag: "Culture · Safety",
     links: {
       arxiv: "https://arxiv.org/abs/2601.15550",
       data: "https://huggingface.co/datasets/Sangmitra-06/INDICA",
@@ -103,7 +103,7 @@ window.FEATURED = [
     venue: "COLM 2025",
     authors: ["Harsh Nishant Lalai", "Raj Sanjay Shah", "Jiaxin Pei", "Sashank Varma", "Yi-Chia Wang", "Ali Emami"],
     blurb: "We let LLMs ask the questions. Playing 20 Questions across 7 languages reveals substantial Global North / South disparities in what models can actually deduce.",
-    tag: "Bias · Reasoning",
+    tag: "Safety · Reasoning",
     links: {
       arxiv: "https://arxiv.org/abs/2508.05525",
       site: "https://sites.google.com/view/llmbias20q/home",
@@ -144,8 +144,11 @@ window.FEATURED = [
 
 // Full publications list, compiled from CV_AliEmami-04-17.pdf (April 2026).
 window.PUBLICATIONS = [
+  // EMNLP 2026
+  { id: "rating-the-pitch", year: 2026, title: "Rating the Pitch, Not the Product: User Evaluations of LLMs Reflect Expectations More Than Performance", authors: ["Robert Morabito", "Tyler McDonald", "Charitra Viswanath", "Angel Hsing-Chi Hwang", "Susanne Gaube", "Jad Kabbara", "Ali Emami"], venue: "EMNLP 2026", tag: "HCI", links: { arxiv: "https://arxiv.org/abs/2607.05113" } },
+  { id: "quizzing-translation", year: 2026, title: "Quizzing the Translation: A Prover-Grounded Evaluation Metric for NLFOL", authors: ["Pu Suo", "Ali Emami"], venue: "EMNLP 2026", tag: "Evaluation" },
   // ACL 2026 — 6 papers
-  { id: "sage", year: 2026, title: "SAGE: A Search-AuGmented Evaluation of Large Language Models on Free-Form QA", authors: ["Sher Badshah", "Ali Emami", "Hassan Sajjad"], venue: "ACL 2026", tag: "Evaluation" },
+  { id: "sage", year: 2026, title: "SAGE: A Search-AuGmented Evaluation of Large Language Models on Free-Form QA", authors: ["Sher Badshah", "Ali Emami", "Hassan Sajjad"], venue: "ACL 2026", tag: "Evaluation", links: { acl: "https://aclanthology.org/2026.acl-long.66/" } },
   { id: "common-to-whom", year: 2026, title: "Common to Whom? Regional Cultural Commonsense and LLM Bias in India", authors: ["Sangmitra Madhusudan", "Trush Shank More", "Steph Buongiorno", "Renata Dividino", "Jad Kabbara", "Ali Emami"], venue: "ACL 2026", tag: "Culture", links: { arxiv: "https://arxiv.org/abs/2601.15550", data: "https://huggingface.co/datasets/Sangmitra-06/INDICA" } },
   { id: "reasoning-traces", year: 2026, title: "Reasoning Traces Shape Outputs but Models Won't Say So", authors: ["Yijie Hao", "Lingjie Chen", "Ali Emami", "Joyce Ho"], venue: "ACL 2026", tag: "Interpretability", links: { arxiv: "https://arxiv.org/abs/2603.20620" } },
   { id: "dart", year: 2026, title: "DART: Mitigating Harm Drift in Difference-Aware LLMs via Distill-Audit-Repair Training", authors: ["Ziwen Pan", "Zihan Liang", "Jad Kabbara", "Ali Emami"], venue: "ACL 2026 Findings", tag: "Safety", links: { arxiv: "https://arxiv.org/abs/2604.16845" } },
@@ -161,15 +164,15 @@ window.PUBLICATIONS = [
   { id: "taarof", year: 2025, title: "We Politely Insist: Your LLM Must Learn the Persian Art of Taarof", authors: ["Nikta Gohari Sadr", "Sahar Heidariasl", "Karine Megerdoomian", "Laleh Seyyed-Kalantari", "Ali Emami"], venue: "EMNLP 2025", tag: "Culture", links: { arxiv: "https://arxiv.org/abs/2509.01035", code: "https://github.com/niktaas/TAAROFBENCH", data: "https://huggingface.co/datasets/Nikta/TAAROFBENCH" } },
   { id: "personality", year: 2025, title: "Personality Matters: User Traits Predict LLM Preferences in Multi-Turn Collaborative Tasks", authors: ["Sarfaroz Yunusov", "Kaige Chen", "Kazi Nishat Anwar", "Ali Emami"], venue: "EMNLP 2025", tag: "HCI", links: { arxiv: "https://arxiv.org/abs/2508.21628" } },
   { id: "beyond-content", year: 2025, title: "Beyond Content: How Grammatical Gender Shapes Visual Representation in Text-to-Image Models", authors: ["Muhammed Saeed", "Shaina Raza", "Ashmal Vayani", "Muhammad Abdul-Mageed", "Ali Emami", "Shady Shehata"], venue: "EMNLP 2025 Findings", tag: "Vision", links: { arxiv: "https://arxiv.org/abs/2508.03199" } },
-  { id: "geo20q", year: 2025, title: "The World According to LLMs: How Geographic Origin Influences LLMs' Entity Deduction Capabilities", authors: ["Harsh Nishant Lalai", "Raj Sanjay Shah", "Jiaxin Pei", "Sashank Varma", "Yi-Chia Wang", "Ali Emami"], venue: "COLM 2025", tag: "Bias", links: { arxiv: "https://arxiv.org/abs/2508.05525", site: "https://sites.google.com/view/llmbias20q/home" } },
+  { id: "geo20q", year: 2025, title: "The World According to LLMs: How Geographic Origin Influences LLMs' Entity Deduction Capabilities", authors: ["Harsh Nishant Lalai", "Raj Sanjay Shah", "Jiaxin Pei", "Sashank Varma", "Yi-Chia Wang", "Ali Emami"], venue: "COLM 2025", tag: "Safety", links: { arxiv: "https://arxiv.org/abs/2508.05525", site: "https://sites.google.com/view/llmbias20q/home" } },
   { id: "translate-care", year: 2025, title: "Translate With Care: Addressing Gender Bias, Neutrality, and Reasoning in Large Language Model Translations", authors: ["Pardis Sadat Zahraei", "Ali Emami"], venue: "ACL 2025 Findings", tag: "Safety", links: { acl: "https://aclanthology.org/2025.findings-acl.26/", arxiv: "https://arxiv.org/abs/2506.00748" } },
-  { id: "time-capsules", year: 2025, title: "Fine-Tuned LLMs are \u201CTime Capsules\u201D for Tracking Societal Bias Through Books", authors: ["Sangmitra Madhusudan", "Robert Morabito", "Skye Reid", "Nikta Gohari Sadr", "Ali Emami"], venue: "NAACL 2025", tag: "Bias", links: { acl: "https://aclanthology.org/2025.naacl-long.118/", arxiv: "https://arxiv.org/abs/2502.05331" } },
+  { id: "time-capsules", year: 2025, title: "Fine-Tuned LLMs are \u201CTime Capsules\u201D for Tracking Societal Bias Through Books", authors: ["Sangmitra Madhusudan", "Robert Morabito", "Skye Reid", "Nikta Gohari Sadr", "Ali Emami"], venue: "NAACL 2025", tag: "Safety", links: { acl: "https://aclanthology.org/2025.naacl-long.118/", arxiv: "https://arxiv.org/abs/2502.05331" } },
   // 2024
   { id: "epi", year: 2024, title: "Can We Afford The Perfect Prompt? Balancing Cost and Accuracy with the Economical Prompting Index", authors: ["Tyler McDonald", "Anthony Colosimo", "Yifeng Li", "Ali Emami"], venue: "COLING 2025 (Oral)", tag: "Methods", links: { acl: "https://aclanthology.org/2025.coling-main.471/", arxiv: "https://arxiv.org/abs/2412.01690" } },
   { id: "connections", year: 2024, title: "NYT-Connections: A Deceptively Simple Text Classification Task that Stumps System-1 Thinkers", authors: ["Angel Yahir Loredo Lopez", "Tyler McDonald", "Ali Emami"], venue: "COLING 2025 (Oral)", tag: "Reasoning", award: "Best Dataset Paper", links: { acl: "https://aclanthology.org/2025.coling-main.134/", arxiv: "https://arxiv.org/abs/2412.01621" } },
   { id: "stop", year: 2024, title: "STOP! Benchmarking Large Language Models with Sensitivity Testing on Offensive Progressions", authors: ["Robert Morabito", "Sangmitra Madhusudan", "Tyler McDonald", "Ali Emami"], venue: "EMNLP 2024 (Oral)", tag: "Safety", award: "Societal Impact Award", links: { arxiv: "https://arxiv.org/abs/2409.13843", code: "https://github.com/Robert-Morabito/STOP" } },
   { id: "mirror", year: 2024, title: "MirrorStories: Reflecting Diversity through Personalized Narrative Generation with Large Language Models", authors: ["Sarfaroz Yunusov", "Hamza Sidat", "Ali Emami"], venue: "EMNLP 2024", tag: "Applied", links: { arxiv: "https://arxiv.org/abs/2409.13935", site: "https://mirrorstories.me" } },
-  { id: "subtle", year: 2024, title: "Subtle Biases Need Subtler Measures: Dual Metrics for Evaluating Representative and Affinity Bias in Large Language Models", authors: ["Abhishek Kumar", "Sarfaroz Yunusov", "Ali Emami"], venue: "ACL 2024", tag: "Bias", links: { acl: "https://aclanthology.org/2024.acl-long.23/", arxiv: "https://arxiv.org/abs/2405.14555" } },
+  { id: "subtle", year: 2024, title: "Subtle Biases Need Subtler Measures: Dual Metrics for Evaluating Representative and Affinity Bias in Large Language Models", authors: ["Abhishek Kumar", "Sarfaroz Yunusov", "Ali Emami"], venue: "ACL 2024", tag: "Safety", links: { acl: "https://aclanthology.org/2024.acl-long.23/", arxiv: "https://arxiv.org/abs/2405.14555" } },
   { id: "winovis", year: 2024, title: "Picturing Ambiguity: A Visual Twist on the Winograd Schema Challenge", authors: ["Brendan Park", "Madeline Janecek", "Naser Ezzati-Jivan", "Yifeng Li", "Ali Emami"], venue: "ACL 2024 (Oral)", tag: "Reasoning", links: { acl: "https://aclanthology.org/2024.acl-long.22/" } },
   { id: "confidence", year: 2024, title: "Confidence Under the Hood: An Investigation into the Confidence-Probability Alignment in Large Language Models", authors: ["Abhishek Kumar", "Robert Morabito", "Sanzhar Umbet", "Jad Kabbara", "Ali Emami"], venue: "ACL 2024", tag: "Interpretability", links: { acl: "https://aclanthology.org/2024.acl-long.20/", arxiv: "https://arxiv.org/abs/2405.16282" } },
   { id: "evo", year: 2024, title: "EvoGrad: A Dynamic Take on the Winograd Schema Challenge with Human Adversaries", authors: ["Jing Han Sun", "Ali Emami"], venue: "LREC-COLING 2024", tag: "Benchmarks", links: { arxiv: "https://arxiv.org/pdf/2402.13372" } },
@@ -188,6 +191,7 @@ window.PUBLICATIONS = [
 
 // News (curated subset, the "headline" moments).
 window.NEWS = [
+  { year: 2026, date: "Aug 2026", text: "Two papers accepted to EMNLP 2026 Main Conference.", highlight: true },
   { year: 2026, date: "Jul 2026", text: "Received the ACL 2026 Outstanding Senior Area Chair Award.", link: "https://2026.aclweb.org/program/outstanding_sacs/", highlight: true },
   { year: 2026, date: "Jul 2026", text: "\"Judge, Retrieve, or Abstain: Uncertainty-Guided LLM Judging with Provable Risk Guarantees\" accepted to COLM 2026." },
   { year: 2026, date: "May 2026", text: "\"SCOPE: Selective Conformal Optimized Pairwise LLM Judging\" accepted to ICML 2026.", link: "https://arxiv.org/abs/2602.13110", highlight: true },
@@ -255,7 +259,7 @@ window.GROUP = {
     { name: "Kaige Chen", role: "MSc, Fall 2024 – Present" },
     { name: "Sangmitra Madhusudan", role: "MSc, Fall 2025 – Present", note: "Vector Scholarship" },
     // Undergraduate researchers at Emory
-    { name: "Tom Suo", role: "Undergraduate, Emory CS" },
+    { name: "Pu (Tom) Suo", role: "Undergraduate, Emory CS" },
     { name: "Aurora Wu", role: "Undergraduate, Emory CS" },
     { name: "Liam Neild", role: "Undergraduate, Emory CS" },
     { name: "Shuyang Yu", role: "Undergraduate, Emory CS" },
