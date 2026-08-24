@@ -169,7 +169,7 @@ function Featured({ go }) {
         <SectionHead
           label="Selected work"
           title="Selected work"
-          sub="A selection of recent papers from the group."
+          sub="Selected papers on evaluation methods, cultural and social knowledge, and interpretability in large language models. See Research for the full list."
         />
         <div className="feature-list">
           {window.FEATURED.map((p) => (
