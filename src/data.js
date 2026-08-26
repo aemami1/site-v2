@@ -248,7 +248,6 @@ window.GROUP = {
     // MSc students
     { name: "Rajiv Chilla", role: "MSc, Spring 2026 – Present" },
     { name: "Robert Morabito", role: "MSc, 2024 – Present" },
-    { name: "Kaige Chen", role: "MSc, Fall 2024 – Present" },
     { name: "Sangmitra Madhusudan", role: "MSc, Fall 2025 – Present", note: "Vector Scholarship" },
     // Undergraduate researchers at Emory
     { name: "Pu (Tom) Suo", role: "Undergraduate, Emory CS" },
