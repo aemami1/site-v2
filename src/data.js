@@ -250,6 +250,7 @@ window.GROUP = {
     { name: "Robert Morabito", role: "MSc, 2024 – Present" },
     { name: "Sangmitra Madhusudan", role: "MSc, Fall 2025 – Present", note: "Vector Scholarship" },
     // Undergraduate researchers at Emory
+    { name: "Lynn Zheng", role: "Undergraduate, Emory CS", note: "Emory College Honors Program" },
     { name: "Pu (Tom) Suo", role: "Undergraduate, Emory CS" },
     { name: "Aurora Wu", role: "Undergraduate, Emory CS" },
     { name: "Liam Neild", role: "Undergraduate, Emory CS" },
