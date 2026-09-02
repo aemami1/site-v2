@@ -87,6 +87,12 @@ function Hero({ go }) {
               and study models' internal behaviour, to understand where they succeed, where they fail, and why.
             </p>
             <p className="lede">
+              At the highest level, what I'm interested in is studying (and figuring out <em style={{ fontStyle: "italic" }}>how</em> to study)
+              the capabilities of large language models, and figuring out how (and how not) to best leverage them
+              (perhaps via steering, or fine-tuning, or prompting) to <em style={{ fontStyle: "italic" }}>complement</em>, and
+              in the most ideal case, <em style={{ fontStyle: "italic" }}>augment</em>, our human, and increasingly precious, capabilities.
+            </p>
+            <p className="lede">
               I am recruiting PhD students with research experience in machine learning and natural language processing.
               For how to apply, see the <a href="#group" onClick={(e) => { e.preventDefault(); go("group"); }}>group page</a>.
             </p>
