@@ -137,7 +137,7 @@ window.FEATURED = [
 window.PUBLICATIONS = [
   // EMNLP 2026
   { id: "rating-the-pitch", year: 2026, title: "Rating the Pitch, Not the Product: User Evaluations of LLMs Reflect Expectations More Than Performance", authors: ["Robert Morabito", "Tyler McDonald", "Charitra Viswanath", "Angel Hsing-Chi Hwang", "Susanne Gaube", "Jad Kabbara", "Ali Emami"], venue: "EMNLP 2026", tag: "HCI", links: { arxiv: "https://arxiv.org/abs/2607.05113" } },
-  { id: "quizzing-translation", year: 2026, title: "Quizzing the Translation: A Prover-Grounded Evaluation Metric for NLFOL", authors: ["Pu Suo", "Ali Emami"], venue: "EMNLP 2026", tag: "Evaluation" },
+  { id: "quizzing-translation", year: 2026, title: "Quizzing the Translation: A Prover-Grounded Evaluation Metric for NL→FOL", authors: ["Pu Suo", "Ali Emami"], venue: "EMNLP 2026", tag: "Evaluation" },
   // ACL 2026 — 6 papers
   { id: "sage", year: 2026, title: "SAGE: A Search-AuGmented Evaluation of Large Language Models on Free-Form QA", authors: ["Sher Badshah", "Ali Emami", "Hassan Sajjad"], venue: "ACL 2026", tag: "Evaluation", links: { acl: "https://aclanthology.org/2026.acl-long.66/" } },
   { id: "common-to-whom", year: 2026, title: "Common to Whom? Regional Cultural Commonsense and LLM Bias in India", authors: ["Sangmitra Madhusudan", "Trush Shank More", "Steph Buongiorno", "Renata Dividino", "Jad Kabbara", "Ali Emami"], venue: "ACL 2026", tag: "Culture", links: { acl: "https://aclanthology.org/2026.acl-long.249/", arxiv: "https://arxiv.org/abs/2601.15550", data: "https://huggingface.co/datasets/Sangmitra-06/INDICA" } },
