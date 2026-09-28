@@ -246,6 +246,7 @@ window.GROUP = {
     { name: "Ken Su", role: "PhD, Fall 2026 – Present" },
     { name: "Winston Zeng", role: "PhD, Spring 2026 – Present", note: "Co-supervised with Jinho Choi" },
     // MSc students
+    { name: "Wenshi Sun", role: "MSc, Fall 2026 – Present" },
     { name: "Rajiv Chilla", role: "MSc, Spring 2026 – Present" },
     { name: "Robert Morabito", role: "MSc, 2024 – Present" },
     { name: "Sangmitra Madhusudan", role: "MSc, Fall 2025 – Present", note: "Vector Scholarship" },
