@@ -253,7 +253,6 @@ window.GROUP = {
     // Undergraduate researchers at Emory
     { name: "Conrad Feng", role: "Undergraduate, Emory CS" },
     { name: "Lynn Zheng", role: "Undergraduate, Emory CS", note: "Emory College Honors Program" },
-    { name: "Liam Neild", role: "Undergraduate, Emory CS" },
     { name: "Shuyang Yu", role: "Undergraduate, Emory CS" },
   ],
   alumni: [
