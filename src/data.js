@@ -241,9 +241,9 @@ window.COURSES = [
 window.GROUP = {
   current: [
     // PhD students
-    { name: "Sadeen Alsabbagh", role: "PhD, Fall 2026 – Present" },
-    { name: "Abhya Reddy Ambati", role: "PhD, Spring 2026 – Present" },
     { name: "Ken Su", role: "PhD, Fall 2026 – Present" },
+    { name: "Abhya Reddy Ambati", role: "PhD, Spring 2026 – Present" },
+    { name: "Sadeen Alsabbagh", role: "PhD, Fall 2026 – Present" },
     { name: "Winston Zeng", role: "PhD, Spring 2026 – Present", note: "Co-supervised with Jinho Choi" },
     // MSc students
     { name: "Wenshi Sun", role: "MSc, Fall 2026 – Present" },
@@ -254,6 +254,7 @@ window.GROUP = {
     { name: "Conrad Feng", role: "Undergraduate, Emory CS" },
     { name: "Lynn Zheng", role: "Undergraduate, Emory CS", note: "Emory College Honors Program" },
     { name: "Shuyang Yu", role: "Undergraduate, Emory CS" },
+    { name: "Liam Neild", role: "Undergraduate, Emory CS" },
   ],
   alumni: [
     { name: "Tyler McDonald", role: "MSc, Brock (2025–2026); Vector Scholarship" },
